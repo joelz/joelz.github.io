@@ -1,0 +1,148 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:readme</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="-net-">微信公众平台开发入门（使用.NET）</h1>
+<h2 id="-">为什么要学习微信开发？</h2>
+<ol>
+<li>微信的用户量巨大，已经成为一个平台</li>
+<li>移动时代，你需要学会App开发。但是，有人说：<a href="http://mp.weixin.qq.com/s?__biz=MjM5ODQwMjA4MA==&amp;mid=2649293557&amp;idx=1&amp;sn=98f34bb53a54331887cb99972c89e1bc&amp;scene=1&amp;srcid=0814pzrNvADLn20Poq0XWwKW#rd">别开发  app 了</a></li>
+<li>学习微信公众平台 API 的设计。這是一个互联时代，到处都是 API 。</li>
+</ol>
+<h2 id="-">微信开发出来的应用长什么样？</h2>
+<ol>
+<li>记账机器人</li>
+<li>信昌信息科技</li>
+</ol>
+<h2 id="-">概述</h2>
+<ol>
+<li><a href="https://mp.weixin.qq.com/wiki">微信公众平台开发文档</a>：
+ <img src="wechat-doc.png" alt="微信公众平台开发文档"></li>
+<li>两种交互形式：消息会话；公众号内网页。
+消息会话：群发消息；被动回复消息；客服消息；模板消息。
+公众号内网页：网页授权获取用户基本信息；微信JS-SDK（开发者在网页上通过JavaScript代码使用微信原生功能的工具包，开发者可以使用它在网页上录制和播放微信语音、监听微信分享、上传手机本地图片、拍照等许多能力）</li>
+<li>微信公众号应用的架构：
+<img src="wechat-arch.png" alt="微信公众号应用的架构"></li>
+<li>微信公众号接口分类：
+<img src="wechat-api-type.jpg" alt="微信公众号接口分类"></li>
+</ol>
+<h2 id="-">基本概念</h2>
+<ol>
+<li>微信公众号的分类：订阅号，服务号，企业号，三者有<a href="https://kf.qq.com/faq/140806zARbmm140826M36RJF.html">区别</a>。个人可以申请到订阅号和企业号，但是无法申请认证。</li>
+<li>开发和测试可以使用测试号，申请很方便。<a href="http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login">测试号申请入口</a></li>
+<li>微信公众号的原始ID，AppID（应用ID），AppSecret（应用密钥），<a href="http://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183&amp;token=&amp;lang=zh_CN">access_token</a>，</li>
+<li>URL(服务器地址，必须是80端口或者443端口)，Token(令牌) ，EncodingAESKey(消息加解密密钥)。</li>
+<li>openid</li>
+<li>域名：业务域名，JS接口安全域名，OAuth网页授权回调域名。域名必须备案。</li>
+<li>接入指南：<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421135319&amp;token=&amp;lang=zh_CN">微信公众平台接入指南</a></li>
+</ol>
+<h2 id="-">准备工作</h2>
+<ol>
+<li>用自己的微信申请测试号</li>
+<li>我没有备案过的域名，也没有外网可以访问的服务器，怎么办？<a href="https://natapp.cn/">NATAPP 基于ngrok高速内网穿透服务</a></li>
+<li><a href="https://natapp.cn/article/natapp_newbie">NATAPP1分钟快速新手图文教程 - NATAPP 基于ngrok高速内网穿透服务</a></li>
+<li>开源世界有惊喜，<a href="https://github.com/JeffreySu/WeiXinMPSDK">GitHub上有.NET平台下的微信公众平台SDK封装</a></li>
+</ol>
+<h2 id="-">记账机器人的实现</h2>
+<ol>
+<li>下载WeiXinMPSDK的.NetFx 4.0版本，编译部署到本地</li>
+<li>配置NATAPP，确保外网能访问</li>
+<li>处理用户关注事件：<a href="http://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140454&amp;token=&amp;lang=zh_CN">接收事件推送</a></li>
+<li>处理消息自动回复：<a href="http://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140453&amp;token=&amp;lang=zh_CN">接收普通消息</a></li>
+</ol>
+<h2 id="-js-sdk-demo">微信JS SDK demo</h2>
+<ol>
+<li>配置JS接口安全域名</li>
+<li>自定义菜单 API ：<a href="http://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141013&amp;token=&amp;lang=zh_CN">自定义菜单创建接口</a></li>
+<li>扫一扫及分享到朋友圈：<a href="http://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115&amp;token=&amp;lang=zh_CN">微信JS-SDK说明文档</a></li>
+</ol>
+<h2 id="-">入门之后...</h2>
+<ol>
+<li>OAuth网页授权</li>
+<li>H5开发：<a href="https://github.com/weui/weui">GitHub - weui/weui: A UI library by WeChat official design team, includes the most useful widgets/modules in mobile web applications.</a></li>
+</ol>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
