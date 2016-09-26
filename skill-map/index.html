@@ -1,0 +1,136 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>（我眼中的）研发技能表</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h2 id="-">﻿（我眼中的）研发技能表</h2>
+<h2 id="-">写在前面</h2>
+<p>注意，这里说的是<strong>我眼中</strong>的研发技能表。每个人都有其局限性，有些东西可能我都没听说过，自然也就不会出现在这份列表上。</p>
+<p>往下看之前，先去注册一个笔记软件，用来记笔记。推荐<a href="http://www.wiz.cn/">为知笔记</a>。</p>
+<h2 id="-">学习“如何学习”</h2>
+<p>每个人都有自己的特点，适用于别人的学习方法不一定适用于你。但是共性还是存在的，所以可以先看一些介绍共性的文章，然后尝试不同的学习方法，再看效果，最后总结出适合自己的方法。</p>
+<p><a href="https://xdite.gitbooks.io/learn-something/content/fastest-path.html">学习一个新领域的知识的最佳方法和最快时间各是什么？ · learn-something</a></p>
+<p>《xdite谈技术学习-20160919.pdf》</p>
+<h2 id="-">通用技能（即使转行，也还有用）</h2>
+<ol>
+<li><strong>任务拆分</strong>：识别问题，拆分任务，确定优先级</li>
+<li><strong>沟通反馈</strong>：及时准确地反馈</li>
+<li><strong>有好奇心</strong>：多思考事情背后的逻辑，不管它是不是自己职责内的事情</li>
+<li><strong>多思考</strong>：学会<a href="https://zh.wikipedia.org/wiki/%E6%89%B9%E5%88%A4%E6%80%A7%E6%80%9D%E7%BB%B4">批判性思维</a></li>
+<li><strong>提问的智慧</strong>：看<a href="https://github.com/ruby-china/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md">How-To-Ask-Questions-The-Smart-Way</a></li>
+<li><strong>完成的定义</strong>：无论是别人给你布置任务，还是你给别人布置任务，都要确认双方对于“完成”的定义是清晰且一致的</li>
+<li><strong>熟练的定义</strong>：不要轻易的认为自己已经熟练地掌握了某门语言/框架/技术。学之前先画好路线图，学习过程中时刻反省自己已经到了路线图上的哪一步</li>
+<li><strong>翻-墙</strong>：推荐shadowsocks + Chrome(SwitchyOmega)/Firefox(AutoProxy)，一年100~200元左右，省心省力。</li>
+<li><strong>用Google，不要用百度</strong>：珍爱生命，远离百度。网上免费的东西很多，用好google，可以省下不少的钱和时间。</li>
+<li><strong>用英语</strong>：第一步实现阅读无障碍，然后是听无障碍。最后攻克说和写。参见<a href="http://zhibimo.com/books/xiaolai/everyone-can-use-english">人人都能用英语</a> 和 <a href="https://book.douban.com/subject/3748247/">把你的英语用起来！ (豆瓣)</a></li>
+<li><strong>使用RSS阅读器</strong>：订阅博客，关注技术潮流。推荐<a href="http://bluereader.org/">深蓝阅读 | BlueReader</a> 和 Feedly（需翻墙）</li>
+</ol>
+<p><strong>好书推荐</strong></p>
+<ul>
+<li>《如何阅读一本书》：先学会怎么读书。读书要做笔记。读书得到的东西要用起来。</li>
+<li>《黑客与画家》：历史书，散文书。</li>
+<li>《浪潮之巅》：历史书。</li>
+<li>《重构》：這本如果刚开始看着没感觉，写一两年代码后再回来看。</li>
+<li>《代码整洁之道》：同上</li>
+<li>《代码大全2》：同上</li>
+<li>《Rework中文版》</li>
+<li>《高效程序员的45个习惯》</li>
+<li>《人人都是产品经理》</li>
+</ul>
+<h2 id="-">专业技能 - 基础篇</h2>
+<ol>
+<li><strong>Windows</strong>：装系统；一般的命令行操作；权限模型</li>
+<li><strong>Windows上的辅助工具</strong>：Everything（文件查找工具）</li>
+<li><strong>Office</strong>：写专业的Word文档；学会Excel（格式，公式，图表，数据透视表，基本的VBA）；会做PPT更好</li>
+<li><strong>HTTP 协议</strong>：基础知识；学会使用Fiddler，Wireshark（重型武器）</li>
+<li><strong>学会使用一种文本编辑器</strong>：推荐Notepad++或者新出的Visual Studio Code，学会用它查看文件编码，查找替换字符串，批量搜索</li>
+<li><strong>正则表达式</strong>：看<a href="http://deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a>。学习自己所用的语言中的正则表达式相关类的用法。使用软件RegexBuddy测试正则表达式。</li>
+<li><strong>Chrome</strong>：学会使用里面的F12</li>
+<li><strong>Markdown</strong>：<a href="http://sspai.com/markdown-guide">认识与入门 Markdown</a> 和 <a href="http://markdownpad.com/">MarkdownPad - The Markdown Editor for Windows</a></li>
+<li><strong>JavaScript</strong>：先学习浏览器中的JavaScript，然后学习node.js。新世界向你敞开。</li>
+<li><strong>Git 和 GitHub</strong>：什么是源代码管理。看开源世界的代码会用到这两个工具。<a href="http://zengrong.net/post/1722.htm">使用Git、Git GUI和TortoiseGit | zrong&#39;s blog</a></li>
+</ol>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
